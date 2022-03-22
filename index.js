@@ -1,20 +1,15 @@
-document.getElementById("click").style.color = "red";
+let a;
+let date;
+let time;
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' ,  };
+setInterval(() => {
+    a = new Date(); 
+    date = a.toLocaleDateString(undefined, options);
+    time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+    document.getElementById('time').innerHTML = time + " on " + date;
+}, 1000);
 
-
-let arr = [30];
-
-// array.forEach(function(element)  {
-//     console.log (element)
-// });
-for (let i = 0; i<arr.length;i++){
-    console.log(arr[i])
-}
-
-
-const string = "this is me rehman";
-
-console.log(string.slice(6))
-
-let date = new Date();
-
-console.log(date.getMinutes())
+var time1 = new Date();
+console.log(
+  time1.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+);  
