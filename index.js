@@ -9,7 +9,3 @@ setInterval(() => {
     document.getElementById('time').innerHTML = time + " on " + date;
 }, 1000);
 
-var time1 = new Date();
-console.log(
-  time1.toLocaleString('en-US', { hour: 'numeric', hour12: true })
-);  
